@@ -1,0 +1,262 @@
+@import './variables';
+@import './mixin';
+@import './reset';
+
+/* layout start  ------------------*/
+
+body {
+  font-size: 16px;
+  font-family: "Noto Sans";
+  line-height: 1.05;
+  background-color: rgb(71, 71, 71);
+}
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.header {
+  background-color: black;
+  height: 56px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+
+  @include iPad {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  h1 {
+    @include hide-text;
+
+    img {
+      width: 120px;
+      height: 24px;
+      float: left;
+    }
+  }
+
+  a {
+    color: $colorLight;
+  }
+  i{
+    padding: 2px;
+  }
+  @include iPad{
+    padding: 0 1em 0 1.5em;
+  }
+
+}
+
+.banner{
+  height: 364px;
+  background: url(../images/header_desktop.png) no-repeat;
+  background-size: cover;
+  padding: 0 14em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .bannerText{
+    color: $colorLight;
+    font-size: $font-xl;
+    line-height: 2em;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px 0;
+    border-radius: .3em;
+    &:hover{
+      animation: tada infinite;
+      animation-duration: 1s;
+    }
+    &:active{
+      animation: tada;
+      animation-duration: 1s;
+    }
+  }
+  h4{
+    font-size: $font-l;
+  }
+  @include iPad {
+    margin-top: 56px;
+    height: 298px;
+    padding: 0 8.5em;
+    .bannerText{  
+      line-height: 1.5em;
+    }
+  }
+  @include iPhonePlus678 {
+    padding: 0 2.5em;
+    .bannerText{
+      font-size: 24.4px;
+    }
+  }
+}
+
+#mobileMenuLogo {
+  display: none;
+  color: rgb(223, 223, 223);
+
+  @include iPad {
+    font-size: $font-xl;
+    display: unset;
+  }
+}
+
+#topMenu {
+  float: right;
+  display: flex;
+
+  @include iPad {
+    float: none;
+    transition: max-height .5s;
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+
+    &.topMenu-show {
+      max-height: 500px;
+    }
+  }
+
+  li {
+    margin-right: 20px;
+
+    @include iPad {
+      margin-right: 0;
+      background-color: rgba(5, 5, 5, 0.85);
+      padding: 0 1em;
+      border-bottom: 1px solid #cecacabc;
+      font-size: $font-l;
+      line-height: 3em;
+
+      &:active {
+        background-color: rgba(240, 153, 39, 0.794);
+      }
+
+      &:first-child {
+        border-top: 1px solid #cecacabc;
+      }
+    }
+
+    a {
+      font-size: $font-l;
+      display: block;
+      @include links(orange, .3s);
+
+      i {
+        margin-right: 4px;
+      }
+
+      @include iPad {
+        &:hover {
+          color: $colorLight;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  background: #EFE9E7;
+  padding: 22px 20px 22px 35px;
+  line-height: 1.5em;
+  position: relative;
+  justify-content: space-between;
+
+  h3 {
+    font-size: $font-l;
+    font-weight: bold;
+    line-height: 1.5em;
+  }
+
+  @include iPhonePlus678 {
+    padding: 15px;
+  }
+
+  .footerLeft {
+    display: flex;
+    @include iPad {
+      margin-top: 11px;
+    }
+    @include iPhone678{
+      margin-bottom: 12px;
+    }
+
+    
+    .about {
+      width: 40%;
+
+      @include iPad {
+        display: none;
+      }
+    }
+
+    .contact {
+      width: 40%;
+      margin-left: 10px;
+
+      @include iPad {
+        width: 100%;
+        margin-left: 0;
+      }
+      @include iPhonePlus678 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .otherInfo {
+    min-height: 100px;
+    min-width: 200px;
+    @include iPhonePlus678 {
+      min-width: 172px;
+    }
+  }
+
+  .footerLogo {
+    float: right;
+    background: url(../images/logo_l.svg) no-repeat;
+    width: 100%;
+    height: 36px;
+    background-size: 200px 36px;
+    margin: 1em 0;
+    background-position-x: 10px;
+    @include iPhonePlus678 {
+      height: 30px;
+      background-size: 172px 30px;
+    }
+  }
+
+  .socialLink ul {
+    display: flex;
+    float: right;
+    li {
+      margin-left: 1em;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+      @include iPhonePlus678 {
+        height: 35px;
+        width: 35px;
+      }
+    }
+  }
+}
+
+
+/* layout end  ------------------*/

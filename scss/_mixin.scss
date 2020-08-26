@@ -1,0 +1,70 @@
+@import './mixinDevice';
+
+@mixin hide-text {
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  }
+
+  @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin transition($prop, $duration, $func) {
+  -webkit-transition: $prop $duration $func;
+  -moz-transition: $prop $duration $func;
+  -ms-transition: $prop $duration $func;
+  transition: $prop $duration $func;
+}
+
+@mixin links ($hover, $delay:0) {
+  text-decoration: none;
+  transition: color $delay;
+  &:hover {
+    color: $hover;
+  }
+}
+
+@mixin background($path, $pos:0 0, $rep: no-repeat) {
+  background: {
+    image: url($path);
+    position: $pos;
+    repeat: $rep;
+  }
+}
+
+@mixin clearfix() {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}

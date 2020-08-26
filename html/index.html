@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hex Restaurant</title>
+	<link rel="shirtcut icon" href="./../images/webIcon.png">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans">
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
+	<link href="../fontawesome-free-5.14.0-web/css/fontawesome.min.css" rel="stylesheet">
+	<link href="../fontawesome-free-5.14.0-web/css/solid.min.css" rel="stylesheet">
+	<link href="../fontawesome-free-5.14.0-web/css/brands.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/pureCSS/forms-min.css">
+	<link rel="stylesheet" href="../css/pureCSS/buttons-core-min.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script src="../js/all.js"></script>
+	<script defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8qcvC0KZYpvsLYGeK6Ks7rpJumVG0BrY&callback=initMap"></script>
+</head>
+
+<body onload="setTopMenu()">
+	<div class="wrap">
+		<div class="header">
+			<h1>
+				六角西餐廳
+				<a href="/html/index.html">
+					<img src="/images/logo_w(null).svg" alt="">
+				</a>
+			</h1>
+			<ul id="topMenu">
+				<li><a href="./index.html"><i class="fab fa-firefox"></i>首頁</a></li>
+				<li><a href="./cart.html"><i class="fas fa-user"></i>購物</a></li>
+				<li><a href="./login.html"><i class="fas fa-sign-in-alt"></i>登入</a></li>
+			</ul>
+			<a href="#" id="mobileMenuLogo">
+				<i class="fas fa-bars"></i>
+			</a>
+		</div>
+		<div class="banner">
+			<div class="bannerText">
+				<h3>
+					咬一口就無法忘懷的漢堡
+				</h3>
+				<h4>
+					七夕無法錯過的好滋味
+				</h4>
+				<h4>
+					<i class="fas fa-utensils"></i>
+					六角大漢堡
+					<i class="fas fa-utensils"></i>
+				</h4>
+			</div>
+		</div>
+		<div class="content">
+			<div class="features">
+				<p>
+					<span class="bt"></span>
+					<span class="m2em">客人總在詢問</span>
+					<span class="bt"></span>
+					<br>
+					<span>這麼好吃的秘訣是什麼</span>
+				</p>
+				<ul>
+					<li>
+						<img src="../images/feature_1.png" alt="">
+						<h5>台灣本土蔬菜</h5>
+						<p>
+							台灣一年四季的當季蔬菜，常聽老一輩的說：「正月蔥，二月韭，三月莧，四月蕹，五月瓢，六月瓜，七月筍，八月芋，九芥藍，十芹菜，十一蒜，十二白。」
+						</p>
+					</li>
+					<li>
+						<img src="../images/feature_2.png" alt="">
+						<h5>專業米其林廚師</h5>
+						<p>
+							台灣一年四季的當季蔬菜，常聽老一輩的說：「正月蔥，二月韭，三月莧，四月蕹，五月瓢，六月瓜，七月筍，八月芋，九芥藍，十芹菜，十一蒜，十二白。」
+						</p>
+					</li>
+					<li>
+						<img src="../images/feature_3.png" alt="">
+						<h5>對於專業不能退讓</h5>
+						<p>
+							台灣一年四季的當季蔬菜，常聽老一輩的說：「正月蔥，二月韭，三月莧，四月蕹，五月瓢，六月瓜，七月筍，八月芋，九芥藍，十芹菜，十一蒜，十二白。」
+						</p>
+					</li>
+				</ul>
+
+			</div>
+			<div class="chef">
+				<img src="../images/main_chef_brown.png" alt="">
+				<div class="chefIntro">
+					<h3>今日主廚:帕金森·梅在帕</h3>
+					<h3>Today's Chef: Parkinson no Shock</h3>
+					<p>
+						法夫洛飾演一名洛杉磯的主廚，在與美食評論家發生公開的衝突後，從洛杉磯一家人氣很旺的餐廳辭職，返回老家邁阿密裝修餐車。他與前妻重新聯繫，邀請兒子一同開著餐車回到洛杉磯，並於沿途的各個城市販賣古巴三明治。法夫洛在執導了多部大預算電影之後，完成了該片的劇本，希望能夠「反璞歸真」，製作與烹飪有關的電影[4]。
+					</p>
+				</div>
+
+			</div>
+			<div class="comments">
+				<h3>
+					聽聽別人的感想
+				</h3>
+				<ul>
+					<li>
+						<div>
+							<img src="../images/avatar_1@2x.png" alt="">
+							<span>
+								高雄一口吃
+							</span>
+						</div>
+						<p>
+							自從吃了這家餐廳後，我口水流了一個多月沒停，下次不要再被我遇到，我然我一定連他們的桌子一起啃下去。 --產品經理. 廟口小霸王
+							自從吃了這家餐廳後，我口水流了一個多月沒停，下次不要再被我遇到，我然我一定連他們的桌子一起啃下去。
+						</p>
+						<div class="occupation">--產品經理</div>
+					</li>
+					<li>
+						<div>
+							<img src="../images/avatar_2@2x.png" alt="">
+							<span>
+								廟口小霸王
+							</span>
+						</div>
+						<p>
+							自從吃了這家餐廳後，我口水流了一個多月沒停，下次不要再被我遇到，我然我一定連他們的桌子一起啃下去。 --產品經理. 廟口小霸王
+							自從吃了這家餐廳後，我口水流了一個多月沒停，下次不要再被我遇到，我然我一定連他們的桌子一起啃下去。
+						</p>
+						<div class="occupation">--金身道士</div>
+					</li>
+					<li>
+						<div>
+							<img src="../images/avatar_3@2x.png" alt="">
+							<span>
+								春天花會開
+							</span>
+						</div>
+						<p>
+							自從吃了這家餐廳後，我口水流了一個多月沒停，下次不要再被我遇到，我然我一定連他們的桌子一起啃下去。 --產品經理. 廟口小霸王
+							自從吃了這家餐廳後，我口水流了一個多月沒停，下次不要再被我遇到，我然我一定連他們的桌子一起啃下去。
+						</p>
+						<div class="occupation">--美麗萬分</div>
+					</li>
+				</ul>
+			</div>
+			<div class="order">
+				<h3>
+					我們的位置不太夠坐
+					<br>
+					要不要先訂位呢？
+				</h3>
+				<div>
+					<div class="mapFrame">
+						<div id="map"></div>
+					</div>
+					<form action="" class="pure-form">
+						<label for="name">
+							<div>姓名</div>
+							<input type="text" id="name">
+						</label>
+						<label for="email">
+							<div>信箱</div>
+							<input type="email" id="email">
+						</label>
+						<label for="tel">
+							<div>電話</div>
+							<input type="tel" id="tel">
+						</label>
+						<label for="customNum">
+							<div>人數</div>
+							<input type="number" id="customNum">
+						</label>
+						<div class="needVegetable">
+							<div>是否需要素食</div>
+							<label for="yes" class="radio">
+								<input type="radio" name="vegetable" id="yes" value="yes">
+								<span>yes</span>
+							</label>
+							<label for="no" class="radio">
+								<input type="radio" checked name="vegetable" id="no">
+								<span>no</span>
+							</label>
+						</div>
+						<div class="btns">
+							<div class="btnGroup">
+								<button type="reset" value="reset" class="pure-button cancel">
+									取消
+								</button>
+								<button type="submit" value="submit" class="pure-button send">
+									送出
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footerLeft">
+				<div class="about">
+					<h3>關於-六角西餐廳</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, doloribus.</p>
+				</div>
+				<div class="contact">
+					<h3>聯絡方式</h3>
+					<ul>
+						<li>
+							<i class="fas fa-road"></i>
+							高雄市中正路走到底
+						</li>
+						<li>
+							<i class="fas fa-phone"></i>
+							+886-886-886
+						</li>
+						<li>
+							<i class="fas fa-envelope"></i>
+							Hexschool@gmail.com
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="otherInfo">
+				<div class="footerLogo"></div>
+				<br>
+				<div class="socialLink">
+					<ul>
+						<li>
+							<a href="">
+								<img src="../images/twitter_logo.png" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="../images/fb_logo.png" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="../images/google_logo.png" alt="">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
